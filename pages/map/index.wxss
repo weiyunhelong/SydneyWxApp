@@ -1,0 +1,30 @@
+/* pages/map/index.wxss */
+.mapcontainer{
+  width: 100%;
+}
+
+.daohangv{
+ width: 100%;
+ height: 100rpx;
+ display: flex;
+ justify-content: space-between;
+}
+
+.julitxt{
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+
+.iconv{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.mapicon{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 25rpx;
+}

@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class='backgroundv' style='height:{{winheight}}px;'>
+   <view class='title'>Sydney</view>
+   <view class='infotxt'>Warm-natured,sun-kissed,</view>
+   <view class='infotxt'>and naturally good looking,</view>
+   <view class='infotxt'>Sydney is rather like its luncky,</view>
+   <view class='infotxt'>lucky residernts.</view>
+
+   <button class='btnview' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>开始探索</button>
+   <view class='logoview'>
+     <view class='logov'>
+       <image src='/resources/logo1.png' class='leftsmlogo'></image>
+       <view class='leftlogotxt'>TIYRISM AUSTRALIA</view>       
+     </view>
+      <view class='logov'>
+       <view class='rightlogotxt'>DestinationNSW</view>
+       <image src='/resources/logo2.png' class='rightsmlogo'></image>
+     </view>
+   </view>
+</view>

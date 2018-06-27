@@ -1,0 +1,11 @@
+<!--pages/map/index.wxml-->
+<!--地图信息-->
+<map class="mapcontainer" style='height:{{mapheight}}px;' longitude="{{longitude}}" latitude="{{latitude}}" controls='{{controls}}' bindcontroltap="mapcontroltap"></map>
+
+<!--底部导航信息-->
+<view class='daohangv'>
+  <view class='julitxt'>{{julitxt}}</view>
+  <view class='iconv' bindtap='godaohang'>
+    <image src='/resources/daohang.png' class='mapicon'></image>
+  </view>
+</view>

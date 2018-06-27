@@ -1,0 +1,33 @@
+<!--pages/tansuo/index.wxml-->
+<!--搜索层-->
+<view class='searchview'>
+  <view class='iconfont icon-sousuo searchico'></view>
+  <input type='text' placeholder='请输入地点' placeholder-class='tipcss' class='txtcss' value='{{search}}' bindblur='getsearch' bindconfirm='getsearch'> </input>
+</view>
+
+<!--热门推荐-->
+<view class='commmenttxt' wx:if="{{!issearch}}">热门推荐</view>
+<view class='commentview' wx:if="{{!issearch}}">
+  <block wx:for="{{commentlist}}" wx:key="item" wx:for-index="v">
+     <view class='lcommentv' wx:if="{{v%2==1}}">
+       <image src='{{item.imgpath}}' class='fengmian'></image>
+       <view class='cntname'>{{item.cnname}}</view>
+       <view class='entname'>{{item.enname}}</view>
+     </view> 
+     <view class='rcommentv' wx:else>
+       <image src='{{item.imgpath}}' class='fengmian'></image>
+        <view class='cntname'>{{item.cnname}}</view>
+       <view class='entname'>{{item.enname}}</view>
+     </view> 
+  </block>
+</view>
+
+<!--搜索的结果-->
+<view class='resultv'  wx:for="{{resultlist}}" wx:key="item" wx:if="{{issearch}}">
+   <view class='resulth'>
+      <image src='{{item.imgpath}}' class='resulttu'></image>
+      <view class='resultname'>{{item.enname}}</view>
+      <view class='resultaddress'>{{item.address}}</view>
+      <view class='iconfont icon-daohang1 danghang' bindtap='goprodetail' data-id='{{item.id}}'></view>
+   </view>
+</view>

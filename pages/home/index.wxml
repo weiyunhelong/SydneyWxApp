@@ -1,0 +1,48 @@
+<!--pages/home/index.wxml-->
+
+<!--顶部的MEMU部分-->
+<view class='menuview'>
+  <view class="{{isonechk?'chkmenuv':'nochkmenuv'}}" bindtap='chkmenuopt' data-id="1">
+    景点
+  </view>
+  <view class="{{istwochk?'chkmenuv':'nochkmenuv'}}" bindtap='chkmenuopt' data-id="2">
+    购物
+  </view>
+  <view class="{{isthreechk?'chkmenuv':'nochkmenuv'}}" bindtap='chkmenuopt' data-id="3">
+    餐饮
+  </view>
+  <view class="{{isfourchk?'chkmenuv':'nochkmenuv'}}" bindtap='chkmenuopt' data-id="4">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{luxian}}">
+      <view class='menutxt'>路线</view>
+      <view class='iconfont icon-jiantou2 filterjiantou'></view>
+      <view class="picker">
+        {{luxian[index]}}
+      </view>
+    </picker>
+   
+  </view>
+</view>
+<view style='clear:both;'></view>
+
+<!--地图部分-->
+<map class="mapcontainer" scale="{{scale}}" markers="{{markers}}" longitude="{{longitude}}" latitude="{{latitude}}" bindmarkertap='getpro' controls='{{controls}}' bindcontroltap="mapcontroltap"></map>
+
+<!--底部的数据-->
+<view class='zhixiangv'>
+  <view class='timetxt' wx:if="{{isfourchk}}">12:00am</view>
+  <view class='iconfont icon-daohang zhixiang' wx:if="{{isfourchk}}"></view>
+  <view class='iconfont icon-daohang queding' wx:if="{{!isfourchk}}"></view>
+</view>
+<scroll-view scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" class='prolistview'>
+
+  <block wx:for="{{prolist}}" wx:key="item">
+    <view id="{{item.id}}" class="scroll-view-item" bindtap='godetail'>
+      <image src='{{item.imgpath}}' class='protu'></image>
+      <view class="{{item.ischk?'namedaohang':'nonamedaohang'}}">
+        <view class='proname'>{{item.name}}</view>
+        <view class='iconfont icon-daohang1 huidaohang'></view>
+      </view>
+    </view>
+  </block>
+
+</scroll-view>

@@ -1,0 +1,206 @@
+/* pages/home/detail.wxss */
+/*项目名称*/
+.nametxt{
+  width: 90%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+  margin: 30rpx 5% 0 5%;
+}
+.ennametxt{
+  width: 90%;
+  height:50rpx;
+  line-height: 50rpx;
+  font-size: 25rpx;
+  margin:  0 5%;
+}
+.typev{
+  width: 90%;
+  height:80rpx;
+  line-height:80rpx;
+  margin:  0 5%;
+}
+.dotcss{
+  width: 10rpx;
+  height: 10rpx;
+  background: red;
+  border-radius: 5rpx;
+  margin-top: 30rpx;
+  float: left;
+}
+.typetxt{
+  width: auto;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 23rpx;
+  margin: 0 10rpx;
+  float: left;
+}
+/*轮播图*/
+.swiperitem{
+  width: 100%;
+  height: 400rpx;
+}
+.slideimage{
+  width: 100%;
+  height: 100%;
+}
+.timview{
+  width: 90%;
+  height: 80rpx;
+  border-bottom:0.5rpx solid #ebebeb;
+  margin-left:5%; 
+}
+.iconcss{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin-right: 20rpx;
+  margin-top:20rpx;
+}
+.commenttxt{
+  width:500rpx;
+  height:80rpx;
+  font-size: 28rpx;
+  line-height: 80rpx;
+}
+.newiconcss{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin-right: 20rpx;
+  margin-top:10rpx;
+}
+.newcommenttxt{
+  width:610rpx;
+  height:auto;
+  font-size: 28rpx;
+  line-height:60rpx;
+  word-break: break-all;
+  word-wrap:break-word;
+}
+.opentipview{
+  width: 90%;
+  min-height: 80rpx;
+  margin-left:5%; 
+}
+.geduanceng{
+  width: 100%;
+  height: 20rpx;
+  background-color: #f0f0f0;
+  clear: both;
+}
+/*信息部分*/
+.cninfoview{
+  width: 94%;
+  height: auto;
+  margin: 0 3%;
+}
+.cninfotitle{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+/*音频部分*/
+.cnaudioview{
+  width: 100%;
+  height:80rpx;  
+  margin:50rpx 0;
+}
+.cndrawcss{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  float: left;
+}
+.canvascss{
+  width: 80rpx; 
+  height: 80rpx;
+  border-radius:40rpx; 
+  float: left;
+  background-color: #f0f0f0;
+}
+.cnaudiotime{
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #ccc;
+  font-size: 35rpx;
+  float: left;
+  margin-left: 50rpx;
+}
+.iconv{
+  float: right;
+  width: 80rpx;
+  height: 80rpx;
+}
+/*文字简介部分*/
+.cnsminfoview{
+  width: 95%;
+  height: auto;
+  margin: 0 2.5%;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.moretxt{
+  color: #0f0;
+  width: 95%;
+  margin: 0 2.5%;
+  height: 50rpx;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  margin-bottom: 50rpx;
+}
+
+/*底部的内容*/
+.bottomview{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #fff;
+  box-shadow: #999 0px 0px 10px;
+}
+.julitxt{
+  width:60%;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+  font-size: 28rpx;
+  float: left;
+}
+.daohang{
+  width: 60rpx;
+  height:60rpx;
+  float: right;
+  font-size:50rpx;
+  margin-top: 10rpx;
+  margin-right: 30rpx;
+}
+
+/*轮播图底部的点转变为线*/
+.swiperitem .wx-swiper-dots.wx-swiper-dots-horizontal{
+     margin-bottom: 2rpx;
+}
+.swiperitem .wx-swiper-dot{
+    width: 120rpx;
+    display: inline-flex;
+    height: 3rpx;
+    margin-left: 5rpx;
+    justify-content:space-between;
+}
+.swiperitem .wx-swiper-dot::before{
+    content: '';
+    flex-grow: 1; 
+    background: rgba(255,255,255,0.3);
+    border-radius: 8rpx
+}
+.swiperitem .wx-swiper-dot-active::before{
+    background:#fff;   
+}
