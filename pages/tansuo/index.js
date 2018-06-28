@@ -8,7 +8,7 @@ Page({
     seachtxt:'',//搜索框的值
     commentlist:[],//推荐的数据
     resultlist:[],//搜索的结果
-    issearch:true,//是否搜索
+    issearch:false,//是否搜索
     typeval:0,//从首页地图传递过来的类型，用于获取推荐使用
   },
   //得到搜索框的值
@@ -51,6 +51,17 @@ Page({
     ];
     that.setData({
       resultlist: resultlist
+    })
+  },
+  //点击推荐的跳转
+  godetail:function(e){    
+    var that=this;
+
+    //参数部分
+    var id=e.currentTarget.dataset.id;
+
+    wx.navigateTo({
+      url: '../home/detail?id='+id,
     })
   },
   /**

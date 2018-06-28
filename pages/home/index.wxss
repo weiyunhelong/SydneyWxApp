@@ -12,7 +12,6 @@
   float: left;
   text-align: center;
   font-size: 28rpx;  
-  border-bottom:5rpx #333 solid;
 }
 .nochkmenuv{
   width: 25%;

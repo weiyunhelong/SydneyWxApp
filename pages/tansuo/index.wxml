@@ -9,12 +9,12 @@
 <view class='commmenttxt' wx:if="{{!issearch}}">热门推荐</view>
 <view class='commentview' wx:if="{{!issearch}}">
   <block wx:for="{{commentlist}}" wx:key="item" wx:for-index="v">
-     <view class='lcommentv' wx:if="{{v%2==1}}">
+     <view class='lcommentv' wx:if="{{v%2==1}}" bindtap='godetail' data-id='{{item.id}}'>
        <image src='{{item.imgpath}}' class='fengmian'></image>
        <view class='cntname'>{{item.cnname}}</view>
        <view class='entname'>{{item.enname}}</view>
      </view> 
-     <view class='rcommentv' wx:else>
+     <view class='rcommentv' wx:else bindtap='godetail' data-id='{{item.id}}'>
        <image src='{{item.imgpath}}' class='fengmian'></image>
         <view class='cntname'>{{item.cnname}}</view>
        <view class='entname'>{{item.enname}}</view>
@@ -24,10 +24,10 @@
 
 <!--搜索的结果-->
 <view class='resultv'  wx:for="{{resultlist}}" wx:key="item" wx:if="{{issearch}}">
-   <view class='resulth'>
+   <view class='resulth'  bindtap='godetail' data-id='{{item.id}}'>
       <image src='{{item.imgpath}}' class='resulttu'></image>
       <view class='resultname'>{{item.enname}}</view>
       <view class='resultaddress'>{{item.address}}</view>
-      <view class='iconfont icon-daohang1 danghang' bindtap='goprodetail' data-id='{{item.id}}'></view>
+      <view class='iconfont icon-daohang1 danghang'></view>
    </view>
 </view>

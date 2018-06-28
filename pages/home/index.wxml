@@ -2,16 +2,16 @@
 
 <!--顶部的MEMU部分-->
 <view class='menuview'>
-  <view class="{{isonechk?'chkmenuv':'nochkmenuv'}}" bindtap='chkmenuopt' data-id="1">
+  <view class="{{isonechk?'chkmenuv':'nochkmenuv'}}" style="{{isonechk?'border-bottom:5rpx #333 solid':''}}" bindtap='chkmenuopt' data-id="1">
     景点
   </view>
-  <view class="{{istwochk?'chkmenuv':'nochkmenuv'}}" bindtap='chkmenuopt' data-id="2">
+  <view class="{{istwochk?'chkmenuv':'nochkmenuv'}}" style="{{istwochk?'border-bottom:5rpx #f00 solid':''}}" bindtap='chkmenuopt' data-id="2">
     购物
   </view>
-  <view class="{{isthreechk?'chkmenuv':'nochkmenuv'}}" bindtap='chkmenuopt' data-id="3">
+  <view class="{{isthreechk?'chkmenuv':'nochkmenuv'}}" style="{{isthreechk?'border-bottom:5rpx #930039 solid':''}}" bindtap='chkmenuopt' data-id="3">
     餐饮
   </view>
-  <view class="{{isfourchk?'chkmenuv':'nochkmenuv'}}" bindtap='chkmenuopt' data-id="4">
+  <view class="{{isfourchk?'chkmenuv':'nochkmenuv'}}"  style="{{isfourchk?'border-bottom:5rpx #0ac solid':''}}" bindtap='chkmenuopt' data-id="4">
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{luxian}}">
       <view class='menutxt'>路线</view>
       <view class='iconfont icon-jiantou2 filterjiantou'></view>
@@ -25,7 +25,7 @@
 <view style='clear:both;'></view>
 
 <!--地图部分-->
-<map class="mapcontainer" scale="{{scale}}" markers="{{markers}}" longitude="{{longitude}}" latitude="{{latitude}}" bindmarkertap='getpro' controls='{{controls}}' bindcontroltap="mapcontroltap"></map>
+<map class="mapcontainer" scale="{{scale}}" controls='{{controls}}' markers="{{markers}}" polyline="{{polyline}}" longitude="{{longitude}}" latitude="{{latitude}}" bindmarkertap='getpro'  bindcontroltap="mapcontroltap"></map>
 
 <!--底部的数据-->
 <view class='zhixiangv'>
