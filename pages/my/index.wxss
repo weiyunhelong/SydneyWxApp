@@ -1,0 +1,169 @@
+/* pages/my/index.wxss */
+
+.topview {
+  width: 100%;
+  height: 100rpx;
+}
+
+.txcss {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  float: left;
+  margin: 0rpx 20rpx;
+}
+
+.infov {
+  width: 68%;
+  height: 100rpx;
+  float: left;
+  margin-left: 15rpx;
+}
+
+.wxname {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.sumtxt {
+  font-size: 28rpx;
+}
+
+.listv {
+  float: left;
+}
+
+.mapcss {
+  width: 70rpx;
+  height: 70rpx;
+  margin: 15rpx 0;
+}
+
+/*地图部分*/
+
+.mapcontainer {
+  width: 100%;
+  margin-top: 50rpx;
+  clear: both;
+}
+
+/*箭头部分*/
+
+.fangxiangv {
+  width: 100%;
+  height: 50rpx;
+  text-align: center;
+}
+
+.fxicon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 10rpx;
+}
+
+/*底部的按钮*/
+
+.buttomv {
+  width: 100%;
+  height: 100rpx;
+  background-color: #0cf;
+  position: fixed;
+  bottom: 0;
+}
+
+.saveimg {
+  width: 370rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  float: left;
+}
+
+.fengexian {
+  width: 6rpx;
+  height: 50rpx;
+  border-right: 2rpx solid #fff;
+  float: left;
+  margin: 25rpx 0;
+}
+
+.sharebtn {
+  width: 370rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  float: left;
+  background-color: #0cf;
+  border: 0;
+  border-radius: 0;
+}
+
+.sharebtn::after {
+  border: 0;
+  border-radius: 0;
+  opacity: 0;
+}
+
+/*暂无打卡*/
+
+.zujitip {
+  width: 100%;
+  height: 200rpx;
+  color: #ccc;
+  text-align: center;
+  line-height: 200rpx;
+  font-size:32rpx;
+}
+
+/*足迹列表*/
+
+.zujiv {
+  width: 100%;
+  height: 150rpx;
+  clear: both;
+  border-top: 1rpx solid #ebebeb;
+}
+
+.zujitu {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+  margin: 15rpx;
+  float: left;
+}
+
+.zujidizhi {
+  width: 60%;
+  height: 150rpx;
+  float: left;
+}
+
+.zujiname {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.zujiaddress {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 25rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.zujitime {
+  float: left;
+  font-size: 28rpx;
+  color: #0f0;
+  line-height: 150rpx;
+}

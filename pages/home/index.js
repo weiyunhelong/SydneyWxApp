@@ -20,7 +20,8 @@ Page({
     chanum: 0,
     toView: "",
     prolist: [], //底部的列表
-    luxian: ['一日游(路线1)', '一日游(路线2)']
+    luxian: ['一日游(路线1)', '一日游(路线2)'],
+    winheight:0,//
   },
   //选中菜单
   chkmenuopt: function(e) {
@@ -228,12 +229,28 @@ Page({
       url: '../home/detail?id=' + id
     })
   },
+  //
+  getheight:function(){
+    var that=this;
+
+    wx.getSystemInfo({
+      success: function(res) {
+        console.log("设备信息:");
+        console.log(res);
+        that.setData({
+          winheight: res.screenHeight*0.55
+        })
+      },
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
     var that = this;
-
+    
+    //
+    that.getheight();
     //参数部分
     //var menuchk=getMenuChk();//得到选中的菜单
 
@@ -442,7 +459,12 @@ Page({
 
     //结束标识符
   },
-
+  //个人中心
+  gomycenter:function(){
+    wx.navigateTo({
+      url: '../my/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

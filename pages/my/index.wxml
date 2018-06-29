@@ -1,0 +1,47 @@
+<!--pages/my/index.wxml-->
+
+<!--顶部部分-->
+<view class='topview'>
+  <image src='/resources/tu1.jpg' class='txcss'></image>
+  <view class='infov'>
+    <view class='wxname'>夜未央</view>
+    <view class='sumtxt'>已玩过0个景点，还差68个</view>
+  </view>
+  <view class='listv' bindtap='showmap'>
+    <image src='/resources/list.png' class='mapcss' wx:if="{{showmap}}"></image>
+    <image src='/resources/dituico.png' class='mapcss' wx:if="{{!showmap}}"></image>
+  </view>
+</view>
+
+<!--地图部分-->
+<map class="mapcontainer" style='height:{{winheight}}px;' scale="{{scale}}" markers="{{markers}}" longitude="{{longitude}}" latitude="{{latitude}}" wx:if="{{showmap}}"></map>
+
+<!--箭头部分-->
+<view class='fangxiangv' wx:if="{{showmap}}" bindtap='showshang'>
+  <image src='/resources/shang.png' class='fxicon' wx:if="{{!showshang}}"></image>
+  <image src='/resources/xia.png' class='fxicon' wx:if="{{showshang}}"></image>
+</view>
+
+<!--箭头部分-->
+<view class='buttomv' wx:if="{{showshang&&showmap}}">
+  <view class='saveimg' bindtap='saveimg'>保存足迹照片</view>
+  <view class='fengexian'></view>
+  <button class='sharebtn' open-type='share'>分享我的足迹</button>
+</view>
+
+<!--足迹列表-->
+<view class='zujilist' wx:if="{{!showmap}}">
+  <view class='zujitip' wx:if="{{zujilist.length==0}}">暂无打卡哦</view>
+   
+  <block wx:for="{{zujilist}}" wx:key="item"> 
+  <view class='zujiv' >
+    <image src='{{item.imgpath}}' class='zujitu'></image>
+    <view class='zujidizhi'>
+      <view class='zujiname'>{{item.name}}</view>
+      <view class='zujiaddress'>{{item.address}}</view>
+    </view>
+    <view class='zujitime'>{{item.date}}</view>
+  </view>
+   </block> 
+
+</view>
